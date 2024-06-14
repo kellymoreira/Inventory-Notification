@@ -26,4 +26,43 @@ After completing this solution, we should be able to:
 
 At the **end** of all this, our architecture will look like the following example:
 ## Architecture overview
-![Architecture](/images/architecture.png)
+![Architecture Overview](/images/architecture-overview.png)
+
+## **Task 1: Creating a Lambda function to load data**
+In this task, we will create *a Lambda function* that will process an inventory file. The Lambda function will read the file and insert information into a DynamoDB table.
+![Task 1: Creating a Lambda function to load data](/images/task-1.png)
+
+
+Configure the following settings:
+
+- **Function name:** `Load-Inventory`
+- **Runtime:** *Python 3.9*
+- Expand  **Choose or create an execution role**.
+- **Execution role:** *Use an existing role*
+- **Existing role:** *Lambda-Load-Inventory-Role*
+
+This role gives the Lambda function permissions so that it can access Amazon S3 and DynamoDB.
+
+1. Choose **Create function**
+2. Scroll down to the **Code source** section, and in the **Environment** pane, choose lambda_function.py.
+3. In the code editor, delete all the code.
+4. In the **Code source** editor, copy and paste the following code:
+
+kellymoreira/Inventory-Notification/lambda-functions/loading-data
+lambda-functions/loading-data
+
+It performs the following steps:
+
+- Download the file from Amazon S3 that triggered the event
+- Loop through each line in the file
+- Insert the data into the DynamoDB *Inventory* table
+1. Choose **Deploy** to save your changes.
+    
+    Next, you will configure Amazon S3 to trigger the Lambda function when a file is uploaded.
+    
+
+## **Task 2: Configuring an Amazon S3 event**
+Stores from around the world provide inventory files to load into the inventory tracking system. Instead of uploading their files via FTP, the stores can upload them directly to Amazon S3. They can upload the files through a webpage, a script, or as part of a program. When a file is received, it triggers the Lambda function. This Lambda function will then load the inventory into a DynamoDB table.
+![Task 2: Configuring an Amazon S3 event](/images/task-2.png)
+
+
