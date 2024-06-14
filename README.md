@@ -1,4 +1,88 @@
-# Inventory Notification
+<!-- ᴇɴɢʟɪꜱʜ | [ᴘᴏʀᴛᴜɢᴜᴇꜱᴇ-ʙʀ](https://github.com/kellymoreira/Github-Pages/blob/master/README_pt_br.md) -->
+
+<p align="center">
+<img src="./images/notification-icon.png"  alt="Notification Icon" width="33%"/>
+</p>
+
+<h1 align="center">
+    Inventory Notification
+</h1>
+
+<p align="center">
+   <b><i>description</i></b><br>
+</p>
+
+<!--
+<p align="center">
+        <img alt="Project Made at March 2024" src="https://img.shields.io/badge/%20%20creation-march%2F2024-91ddf7"> 
+        <img alt="Code Size in bytes" src="https://img.shields.io/github/languages/code-size/kellymoreira/ATM-Bank-System?color=fcb3cf" />
+	<img alt="Main Language" src="https://img.shields.io/github/languages/top/kellymoreira/ATM-Bank-System?color=4682B4"/>
+        <img alt="Project Status" src="https://img.shields.io/badge/status-completed-91ddf7">
+</p> -->
+
+
+
+
+<p align="center">
+    <samp>
+    <a href="#About">ABOUT</a>
+   | <a href="#Technologies">TECHNOLOGIES</a>
+   | <a href="#Usage">USAGE</a>
+   | <a href="#Resources">RESOURCES</a>
+   | <a href="#Documentation">DOCUMENTATION</a>
+   | <a href="#Feedbacks">FEEDBACKS</a>
+     </samp>
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## **Scenario**
 
