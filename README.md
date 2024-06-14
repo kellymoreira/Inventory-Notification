@@ -66,3 +66,72 @@ Stores from around the world provide inventory files to load into the inventory 
 ![Task 2: Configuring an Amazon S3 event](/images/task-2.png)
 
 
+
+In this task, we will create an S3 bucket and configure it to trigger the Lambda function.
+
+1. On the **Services** menu, choose **S3**.
+2. Choose **Create bucket**
+    
+    Each bucket must have a unique name, so you will add a random number to the bucket name. For example: *inventory-123*
+    
+3. For **Bucket name** enter: `inventory-<number>` (Replace with a random number)
+4. Choose **Create bucket**
+    
+    You might receive an error that states: *The requested bucket name is not available*. If you get this error, choose the first **Edit** link, change the bucket name, and try again until the bucket name is accepted.
+    
+    You will now configure the bucket to automatically trigger the Lambda function when a file is uploaded.
+    
+5. Choose the name of your *inventory-* bucket.
+6. Choose the **Properties** tab.
+7. Scroll down to **Event notifications**.
+    
+    You will configure an event to trigger when an object is created in the S3 bucket.
+    
+8. Click **Create event notification** then configure these settings:
+    - **Name:** `Load-Inventory`
+    - **Event types:**  *All object create events*
+    - **Destination:** *Lambda Function*
+    - **Lambda function:** *Load-Inventory*
+    - Choose **Save changes**
+    
+    When an object is created in the bucket, this configuration tells Amazon S3 to trigger the *Load-Inventory* Lambda function that you created earlier.
+    
+    Your bucket is now ready to receive inventory files!
+    
+
+## **Task 3: Testing the loading process**
+You are now ready to test the loading process. You will upload an inventory file, then check that it loaded successfully.
+![Task 3: Testing the loading process](/images/task-3.png)
+
+
+Download the inventory files by opening the context (right-click) menu for these links:
+
+kellymoreira/Inventory-Notification/inventory-files
+inventory-files
+
+These files are the inventory files that you can use to test the system. They are comma-separated values (CSV) files. The following example shows the contents of the Berlin file:
+
+store,item,count  
+Berlin,Echo Dot,12  
+Berlin,Echo (2nd Gen),19  
+Berlin,Echo Show,18  
+Berlin,Echo Plus,0  
+Berlin,Echo Look,10  
+Berlin,Amazon Tap,15
+
+22. In the console, return to your S3 bucket by choosing the **Objects** tab.
+23. Choose **Upload**
+24. Choose **Add files**, and select one of the inventory CSV files. (You can choose any inventory file.)
+25. Choose **Upload**
+    
+    Amazon S3 will automatically trigger the Lambda function, which will load the data into a DynamoDB table.
+    
+    A serverless Dashboard application has been provided for you to view the results.
+    
+26. At the top of these instructions, choose the **Details** button, and to the right of **AWS**, choose the **Show** button.
+27. From the **Credentials** window, copy the **Dashboard** URL.
+28. Open a new web browser tab, paste the URL, and press ENTER.
+    
+    The dashboard application will open and display the inventory data that you loaded into the bucket. The data is retrieved from DynamoDB, which proves that the upload successfully triggered the Lambda function.
+
+
