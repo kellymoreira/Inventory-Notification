@@ -54,6 +54,7 @@ At the **end** of all this, our architecture will look like the following exam
 ## Architecture overview
 ![Architecture Overview](/images/architecture-overview.png)
 
+<!----------------------------------- TASK 1 ----------------------------------->
 
 ## **Task 1: Creating a Lambda function to load data**
 In this task, we will create *a Lambda function* that will process an inventory file. The Lambda function will read the file and insert information into a DynamoDB table.
@@ -94,78 +95,62 @@ In this task, we will create *a Lambda function* that will process an inventor
 
 </details>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!----------------------------------- TASK 2 ----------------------------------->
 
 ## **Task 2: Configuring an Amazon S3 event**
+
 Stores from around the world provide inventory files to load into the inventory tracking system. Instead of uploading their files via FTP, the stores can upload them directly to Amazon S3. They can upload the files through a webpage, a script, or as part of a program. When a file is received, it triggers the Lambda function. This Lambda function will then load the inventory into a DynamoDB table.
-![Task 2: Configuring an Amazon S3 event](/images/task-2.png)
-
-
 
 In this task, we will create an S3 bucket and configure it to trigger the Lambda function.
 
-1. On the **Services** menu, choose **S3**.
-2. Choose **Create bucket**
-    
-    Each bucket must have a unique name, so you will add a random number to the bucket name. For example: *inventory-123*
-    
-3. For **Bucket name** enter: `inventory-<number>` (Replace with a random number)
-4. Choose **Create bucket**
-    
-    You might receive an error that states: *The requested bucket name is not available*. If you get this error, choose the first **Edit** link, change the bucket name, and try again until the bucket name is accepted.
-    
-    You will now configure the bucket to automatically trigger the Lambda function when a file is uploaded.
-    
-5. Choose the name of your *inventory-* bucket.
-6. Choose the **Properties** tab.
-7. Scroll down to **Event notifications**.
-    
-    You will configure an event to trigger when an object is created in the S3 bucket.
-    
-8. Click **Create event notification** then configure these settings:
-    - **Name:** `Load-Inventory`
-    - **Event types:**  *All object create events*
-    - **Destination:** *Lambda Function*
-    - **Lambda function:** *Load-Inventory*
-    - Choose **Save changes**
-    
-    When an object is created in the bucket, this configuration tells Amazon S3 to trigger the *Load-Inventory* Lambda function that you created earlier.
-    
-    Your bucket is now ready to receive inventory files!
+<details>
+    <summary><strong>Expand for Details</strong></summary>
+    <ol>
+        <li>On the <strong>Services</strong> menu, choose <strong>S3</strong>.</li>
+        <li>Choose <strong>Create bucket</strong></li>
+        <p>Each bucket must have a unique name, so you will add a random number to the bucket name. For example: <em>inventory-123</em></p>
+        <li>For <strong>Bucket name</strong> enter: <code>inventory-<number></code> (Replace with a random number)</li>
+        <li>Choose <strong>Create bucket</strong></li>
+        <p>You might receive an error that states: <em>The requested bucket name is not available</em>. If you get this error, choose the first <strong>Edit</strong> link, change the bucket name, and try again until the bucket name is accepted.</p>
+        <p>You will now configure the bucket to automatically trigger the Lambda function when a file is uploaded.</p>
+        <li>Choose the name of your <em>inventory-</em> bucket.</li>
+        <li>Choose the <strong>Properties</strong> tab.</li>
+        <li>Scroll down to <strong>Event notifications</strong>.</li>
+        <p>You will configure an event to trigger when an object is created in the S3 bucket.</p>
+        <li>Click <strong>Create event notification</strong> then configure these settings:
+            <ul>
+                <li><strong>Name:</strong> <code>Load-Inventory</code></li>
+                <li><strong>Event types:</strong> <em>All object create events</em></li>
+                <li><strong>Destination:</strong> <em>Lambda Function</em></li>
+                <li><strong>Lambda function:</strong> <em>Load-Inventory</em></li>
+            </ul>
+        </li>
+        <li>Choose <strong>Save changes</strong></li>
+        <p>When an object is created in the bucket, this configuration tells Amazon S3 to trigger the <em>Load-Inventory</em> Lambda function that you created earlier.</p>
+    </ol>
+    <p>Your bucket is now ready to receive inventory files!</p>
+
+![Task 2: Configuring an Amazon S3 event](/images/task-2.png)
+
+            
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
 
 ## **Task 3: Testing the loading process**
