@@ -133,7 +133,6 @@ In this task, we will create an S3 bucket and configure it to trigger the Lambda
     <p>Your bucket is now ready to receive inventory files!</p>
 
 ![Task 2: Configuring an Amazon S3 event](/images/task-2.png)
-
             
 </details>
 
@@ -153,8 +152,24 @@ In this task, we will create an S3 bucket and configure it to trigger the Lambda
 
 
 
-    
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
 ## **Task 3: Testing the loading process**
 You are now ready to test the loading process. You will upload an inventory file, then check that it loaded successfully.
 ![Task 3: Testing the loading process](/images/task-3.png)
@@ -204,7 +219,77 @@ You can also view the data directly in the DynamoDB table.
 4. Choose the **Items** tab.
     
     The data from the inventory file will be displayed. It shows the store, item and inventory count.
-    
+
+
+-->
+
+
+
+
+
+
+
+<!----------------------------------- TASK 3 ----------------------------------->
+
+## **Task 3: Testing the loading process**
+We are now ready to test the loading process. You will upload an inventory file, then check that it loaded successfully.
+
+<details> 
+    <summary><strong>Expand for Details</strong></summary>        
+    <ol>
+        <li>Download the inventory files by opening the context (right-click) menu for these links:
+            <ul>
+                <li><code>kellymoreira/Inventory-Notification/inventory-files</code></li>
+                <li><code>inventory-files</code></li>
+            </ul>
+            These files are the inventory files that you can use to test the system. They are comma-separated values (CSV) files. The following example shows the contents of the Berlin file:
+            <pre><code>
+                
+store,item,count  
+Berlin,Echo Dot,12  
+Berlin,Echo (2nd Gen),19  
+Berlin,Echo Show,18  
+Berlin,Echo Plus,0  
+Berlin,Echo Look,10  
+Berlin,Amazon Tap,15
+            </code></pre>
+        </li>
+        <li>In the console, return to your S3 bucket by choosing the <strong>Objects</strong> tab.</li>
+        <li>Choose <strong>Upload</strong></li>
+        <li>Choose <strong>Add files</strong>, and select one of the inventory CSV files. (You can choose any inventory file.)</li>
+        <li>Choose <strong>Upload</strong></li>
+        <p>Amazon S3 will automatically trigger the Lambda function, which will load the data into a DynamoDB table.</p>
+        <p>A serverless Dashboard application has been provided for you to view the results.</p>
+        <li>At the top of these instructions, choose the <strong>Details</strong> button, and to the right of <strong>AWS</strong>, choose the <strong>Show</strong> button.</li>
+        <li>From the <strong>Credentials</strong> window, copy the <strong>Dashboard</strong> URL.</li>
+        <li>Open a new web browser tab, paste the URL, and press ENTER.</li>
+        <p>The dashboard application will open and display the inventory data that you loaded into the bucket. The data is retrieved from DynamoDB, which proves that the upload successfully triggered the Lambda function.</p>
+        ![Inventory Dashboard](/images/inventory-dashboard.png)
+        <p>The dashboard application is served as a static webpage from Amazon S3. The dashboard authenticates via Amazon Cognito as an <em>anonymous user</em>, which provides sufficient permissions for the dashboard to retrieve data from DynamoDB.</p>
+        <p>You can also view the data directly in the DynamoDB table.</p>
+        <li>On the <strong>Services</strong> menu, choose <strong>DynamoDB</strong>.</li>
+        <li>In the left navigation pane, choose <strong>Tables</strong>.</li>
+        <li>Choose the <strong>Inventory</strong> table.</li>
+        <li>Choose the <strong>Items</strong> tab.</li>
+        <p>The data from the inventory file will be displayed. It shows the store, item, and inventory count.</p>
+        ![Task 3: Testing the loading process](/images/task-3.png)
+    </ol>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
 
 ## **Task 4: Configuring notifications**
 
