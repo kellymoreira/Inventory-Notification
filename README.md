@@ -1,7 +1,7 @@
 <!-- ᴇɴɢʟɪꜱʜ | [ᴘᴏʀᴛᴜɢᴜᴇꜱᴇ-ʙʀ](https://github.com/kellymoreira/Github-Pages/blob/master/README_pt_br.md) -->
 
 <p align="center">
-<img src="./images/notification-icon.png"  alt="Notification Icon" width="20%"/></p>
+<img src="./images/notification-icon.png"  alt="Notification Icon" width="23%"/></p>
 
 <h1 align="center">
     Inventory Notification
