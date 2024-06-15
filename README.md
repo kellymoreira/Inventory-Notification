@@ -55,7 +55,7 @@ At the **end** of all this, our architecture will look like the following exam
 ## Architecture overview
 ![Architecture Overview](/images/architecture-overview.png)
 
-<!----------------------------------- TASK 1 ----------------------------------->
+<!----------------------------------- TASK 1 -----------------------------------
 
 ## **Task 1: Creating a Lambda function to load data**
 In this task, we will create *a Lambda function* that will process an inventory file. The Lambda function will read the file and insert information into a DynamoDB table.
@@ -96,7 +96,7 @@ In this task, we will create *a Lambda function* that will process an inventor
 
 </details>
 
-<!----------------------------------- TASK 2 ----------------------------------->
+<!----------------------------------- TASK 2 -----------------------------------
 
 ## **Task 2: Configuring an Amazon S3 event**
 Stores from around the world provide inventory files to load into the inventory tracking system. Instead of uploading their files via FTP, the stores can upload them directly to Amazon S3. They can upload the files through a webpage, a script, or as part of a program. When a file is received, it triggers the Lambda function. This Lambda function will then load the inventory into a DynamoDB table.
@@ -135,7 +135,7 @@ In this task, we will create an S3 bucket and configure it to trigger the Lambda
 </details>
 
 
-<!----------------------------------- TASK 3 ----------------------------------->
+<!----------------------------------- TASK 3 -----------------------------------
 
 ## **Task 3: Testing the loading process**
 We are now ready to test the loading process. You will upload an inventory file, then check that it loaded successfully.
@@ -181,7 +181,7 @@ Berlin,Amazon Tap,15
     </ol>
 </details>
 
-<!----------------------------------- TASK 4 ----------------------------------->
+<!----------------------------------- TASK 4 -----------------------------------
 
 ## **Task 4: Configuring notifications**
 You want to notify inventory management staff when a store runs out of stock for an item. For this serverless notification functionality, you will use **Amazon SNS**.
@@ -269,4 +269,4 @@ You will now upload an inventory file to Amazon S3, which will trigger the origi
     
     If you did not receive a notification, wait a few minutes and upload a different inventory file. The DynamoDB trigger can sometimes take a few minutes to enable.
     
-51. Try to upload multiple inventory files at the same time. What do you think will happen?
+51. Try to upload multiple inventory files at the same time. What do you think will happen? >
