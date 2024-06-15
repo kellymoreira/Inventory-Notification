@@ -9,16 +9,13 @@
 </h1>
 
 <p align="center">
-   <b><i>description</i></b><br>
+   <b>
+   <i>
+   Implementing a serverless architecture on AWS to track and notify low inventory levels using S3, Lambda, DynamoDB, and SNS.
+   </i>
+   </b>
 </p>
 
-<!--
-<p align="center">
-        <img alt="Project Made at March 2024" src="https://img.shields.io/badge/%20%20creation-march%2F2024-91ddf7"> 
-        <img alt="Code Size in bytes" src="https://img.shields.io/github/languages/code-size/kellymoreira/ATM-Bank-System?color=fcb3cf" />
-	<img alt="Main Language" src="https://img.shields.io/github/languages/top/kellymoreira/ATM-Bank-System?color=4682B4"/>
-        <img alt="Project Status" src="https://img.shields.io/badge/status-completed-91ddf7">
-</p> -->
 
 
 
