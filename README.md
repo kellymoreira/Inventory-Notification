@@ -1,7 +1,8 @@
 <!-- ᴇɴɢʟɪꜱʜ | [ᴘᴏʀᴛᴜɢᴜᴇꜱᴇ-ʙʀ](https://github.com/kellymoreira/Github-Pages/blob/master/README_pt_br.md) -->
 
 <p align="center">
-<img src="./images/notification-icon.png"  alt="Notification Icon" width="23%"/></p>
+   <img src="./images/notification-icon.png"  alt="Notification Icon" width="23%"/>
+</p>
 
 <h1 align="center">
     Inventory Notification
@@ -11,8 +12,8 @@
 <b> 
 <i>
    Implementing a serverless architecture on AWS to track and notify low inventory levels using <br> S3, Lambda, DynamoDB, and SNS.
-   </i>
-   </b>
+</i>
+</b>
 </p>
 
 <!--
@@ -29,7 +30,6 @@
 -->
 
 ## **Scenario**
-
 We are creating an inventory tracking system. Stores from around the world will upload an inventory file to Amazon S3. Our team wants to be able to view the inventory levels and send a notification when inventory levels are low.
 
 In this situation, we will:
@@ -41,7 +41,6 @@ In this situation, we will:
 - Amazon SNS will then *send you a notification through short message service (SMS) or email* that requests additional inventory.
 
 ## **Implementation overview**
-
 Traditionally, applications run on servers. These servers can be physical (or bare metal). They can also be virtual environments that run on top of physical servers. However, you must purchase and provision all these types of servers, and you must also manage their capacity. In contrast, you can run your code on AWS Lambda without needing to pre-allocate servers. With Lambda, you only need to provide the code and define a trigger. The Lambda function can run when it is needed, whether it is once per week or hundreds of times per second. You only pay for what you use.
 
 This action demonstrates how to trigger a Lambda function when a file is uploaded to Amazon Simple Storage Service (Amazon S3). The file will be loaded into an Amazon DynamoDB table. The data will be available for you to view on a dashboard page that retrieves the data directly from DynamoDB. This solution *does not use Amazon Elastic Compute Cloud (Amazon EC2)*. It is a *serverless solution* that *automatically scales when it is used*. It also incurs *little cost* when it is in use. When it is idle, there is *practically no cost* because will you only be billed for data storage.
@@ -100,7 +99,6 @@ In this task, we will create *a Lambda function* that will process an inventor
 <!----------------------------------- TASK 2 ----------------------------------->
 
 ## **Task 2: Configuring an Amazon S3 event**
-
 Stores from around the world provide inventory files to load into the inventory tracking system. Instead of uploading their files via FTP, the stores can upload them directly to Amazon S3. They can upload the files through a webpage, a script, or as part of a program. When a file is received, it triggers the Lambda function. This Lambda function will then load the inventory into a DynamoDB table.
 
 In this task, we will create an S3 bucket and configure it to trigger the Lambda function.
@@ -137,98 +135,6 @@ In this task, we will create an S3 bucket and configure it to trigger the Lambda
 </details>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--
-## **Task 3: Testing the loading process**
-You are now ready to test the loading process. You will upload an inventory file, then check that it loaded successfully.
-![Task 3: Testing the loading process](/images/task-3.png)
-
-
-Download the inventory files by opening the context (right-click) menu for these links:
-
-kellymoreira/Inventory-Notification/inventory-files
-inventory-files
-
-These files are the inventory files that you can use to test the system. They are comma-separated values (CSV) files. The following example shows the contents of the Berlin file:
-
-store,item,count  
-Berlin,Echo Dot,12  
-Berlin,Echo (2nd Gen),19  
-Berlin,Echo Show,18  
-Berlin,Echo Plus,0  
-Berlin,Echo Look,10  
-Berlin,Amazon Tap,15
-
-22. In the console, return to your S3 bucket by choosing the **Objects** tab.
-23. Choose **Upload**
-24. Choose **Add files**, and select one of the inventory CSV files. (You can choose any inventory file.)
-25. Choose **Upload**
-    
-    Amazon S3 will automatically trigger the Lambda function, which will load the data into a DynamoDB table.
-    
-    A serverless Dashboard application has been provided for you to view the results.
-    
-26. At the top of these instructions, choose the **Details** button, and to the right of **AWS**, choose the **Show** button.
-27. From the **Credentials** window, copy the **Dashboard** URL.
-28. Open a new web browser tab, paste the URL, and press ENTER.
-    
-    The dashboard application will open and display the inventory data that you loaded into the bucket. The data is retrieved from DynamoDB, which proves that the upload successfully triggered the Lambda function.
-
-![Inventory Dashboard](/images/inventory-dashboard.png)
-
-If the dashboard application does not display any information, ask your instructor to help you diagnose the problem.
-
-The dashboard application is served as a static webpage from Amazon S3. The dashboard authenticates via Amazon Cognito as an *anonymous user*, which provides sufficient permissions for the dashboard to retrieve data from DynamoDB.
-
-You can also view the data directly in the DynamoDB table.
-
-1. On the **Services** menu, choose **DynamoDB**.
-2. In the left navigation pane, choose **Tables**.
-3. Choose the **Inventory** table.
-4. Choose the **Items** tab.
-    
-    The data from the inventory file will be displayed. It shows the store, item and inventory count.
-
-
--->
-
-
-
-
-
-
-
 <!----------------------------------- TASK 3 ----------------------------------->
 
 ## **Task 3: Testing the loading process**
@@ -243,8 +149,7 @@ We are now ready to test the loading process. You will upload an inventory file,
                 <li><code>inventory-files</code></li>
             </ul>
             These files are the inventory files that you can use to test the system. They are comma-separated values (CSV) files. The following example shows the contents of the Berlin file:
-            <pre><code>
-                
+            <pre><code>  
 store,item,count  
 Berlin,Echo Dot,12  
 Berlin,Echo (2nd Gen),19  
@@ -276,12 +181,9 @@ Berlin,Amazon Tap,15
     </ol>
 </details>
 
-
-
 <!----------------------------------- TASK 4 ----------------------------------->
 
 ## **Task 4: Configuring notifications**
-
 You want to notify inventory management staff when a store runs out of stock for an item. For this serverless notification functionality, you will use **Amazon SNS**.
 
 Amazon SNS is a flexible, fully managed publish/subscribe messaging and mobile notifications service. It delivers messages to subscribing endpoints and clients. With Amazon SNS, you can fan out messages to a large number of subscribers, including distributed systems and services, and mobile devices.
@@ -305,29 +207,8 @@ Amazon SNS is a flexible, fully managed publish/subscribe messaging and mobile n
         <img src="/images/task-4.png" alt="Task 4: Configuring notifications">
     </ol>
 </details>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     
-
 ## **Task 5: Creating a Lambda function to send notifications**
-
 You could modify the existing *Load-Inventory* Lambda function to check inventory levels while the file is being loaded. However, this configuration is not a good architectural practice. Instead of overloading the *Load-Inventory* function with business logic, you will create another Lambda function that is triggered when data is loaded into the DynamoDB table. This function will be triggered by a *DynamoDB stream*.
 
 This architectural approach offers several benefits:
@@ -375,7 +256,6 @@ You will now configure the function so it triggers when data is added to the *I
     
 
 ## **Task 6: Testing the System**
-
 You will now upload an inventory file to Amazon S3, which will trigger the original *Load-Inventory* function. This function will load data into DynamoDB, which will then trigger the new *Check-Stock* Lambda function. If the Lambda function detects an item with zero inventory, it will send a message to Amazon SNS. Then, Amazon SNS will notify you through SMS or email.
 
 47. On the **Services** menu, choose **S3**.
