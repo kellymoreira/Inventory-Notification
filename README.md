@@ -15,6 +15,7 @@
    </b>
 </p>
 
+<!--
 <p align="center">
     <samp>
     <a href="#About">ABOUT</a>
@@ -25,6 +26,7 @@
    | <a href="#Feedbacks">FEEDBACKS</a>
      </samp>
 </p>
+-->
 
 ## **Scenario**
 
