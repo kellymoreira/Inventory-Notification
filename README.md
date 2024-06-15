@@ -10,7 +10,8 @@
 <p align="center">
 <b> 
 <i>
-   Implementing a serverless architecture on AWS to track and notify low inventory levels using S3, Lambda, DynamoDB, and SNS.
+   Implementing a serverless architecture on AWS <br>
+    to track and notify low inventory levels using S3, Lambda, DynamoDB, and SNS.
    </i>
    </b>
 </p>
