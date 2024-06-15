@@ -1,17 +1,16 @@
 <!-- ᴇɴɢʟɪꜱʜ | [ᴘᴏʀᴛᴜɢᴜᴇꜱᴇ-ʙʀ](https://github.com/kellymoreira/Github-Pages/blob/master/README_pt_br.md) -->
 
 <p align="center">
-<img src="./images/notification-icon.png"  alt="Notification Icon" width="25%"/></p>
+<img src="./images/notification-icon.png"  alt="Notification Icon" width="20%"/></p>
 
 <h1 align="center">
-    INVENTORY NOTIFICATION
+    Inventory Notification
 </h1>
 
 <p align="center">
 <b> 
 <i>
-   Implementing a serverless architecture on AWS <br>
-    to track and notify low inventory levels using S3, Lambda, DynamoDB, and SNS.
+   Implementing a serverless architecture on AWS to track and notify low inventory levels using <br> S3, Lambda, DynamoDB, and SNS.
    </i>
    </b>
 </p>
