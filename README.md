@@ -278,41 +278,52 @@ Berlin,Amazon Tap,15
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-   
+<!----------------------------------- TASK 4 ----------------------------------->
 
 ## **Task 4: Configuring notifications**
 
-You want to notify inventory management staff when a store runs out of stock for an item. For this serverless notification functionality, you will use **Amazon SNS**.
-
-![Task 4: Configuring notifications](/images/task-4.png)
+You want to notify inventory management staff when a store runs out of stock for an item. For this serverless notification functionality, you will use **Amazon SNS**.
 
 Amazon SNS is a flexible, fully managed publish/subscribe messaging and mobile notifications service. It delivers messages to subscribing endpoints and clients. With Amazon SNS, you can fan out messages to a large number of subscribers, including distributed systems and services, and mobile devices.
 
-33. On the **Services** menu, choose **Simple Notification Service**.
-34. In the **Create topic** box, for **Topic name**, enter: `NoStock`. Keep **Standard** selected.
-35. Choose **Create topic**
-    
-    To receive notifications, you must *subscribe* to the topic. You can choose to receive notifications via several methods, such as SMS and email.
-    
-36. In the lower half of the page, choose **Create subscription** and configure these settings:
-    - **Protocol:** *Email*
-    - **Endpoint:** Enter your email address
-    - Choose **Create subscription**
-    
-    After you create an email subscription, you will receive a confirmation email message. Open the message and choose the *Confirm subscription* link.
-    
-    Any message that is sent to the SNS topic will be forwarded to your email.
+<details>
+    <summary><strong>Expand for Details</strong></summary>
+    <ol>
+        <li>On the <strong>Services</strong> menu, choose <strong>Simple Notification Service</strong>.</li>
+        <li>In the <strong>Create topic</strong> box, for <strong>Topic name</strong>, enter: <code>NoStock</code>. Keep <strong>Standard</strong> selected.</li>
+        <li>Choose <strong>Create topic</strong>.</li>
+        <p>To receive notifications, you must <em>subscribe</em> to the topic. You can choose to receive notifications via several methods, such as SMS and email.</p>
+        <li>In the lower half of the page, choose <strong>Create subscription</strong> and configure these settings:
+            <ul>
+                <li><strong>Protocol:</strong> <em>Email</em></li>
+                <li><strong>Endpoint:</strong> Enter your email address</li>
+            </ul>
+        </li>
+        <li>Choose <strong>Create subscription</strong></li>
+        <p>After you create an email subscription, you will receive a confirmation email message. Open the message and choose the <em>Confirm subscription</em> link.</p>
+        <p>Any message that is sent to the SNS topic will be forwarded to your email.</p>
+        <img src="/images/task-4.png" alt="Task 4: Configuring notifications">
+    </ol>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
 
 ## **Task 5: Creating a Lambda function to send notifications**
