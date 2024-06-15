@@ -89,9 +89,36 @@ In this task, we will create *a Lambda function* that will process an inventor
         <li>Choose <strong>Deploy</strong> to save your changes.</li>
     </ol>
     <p>Next, you will configure Amazon S3 to trigger the Lambda function when a file is uploaded.</p>
+    
+![Task 1: Creating a Lambda function to load data](/images/task-1.png)
+
 </details>
 
-![Task 1: Creating a Lambda function to load data](/images/task-1.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
