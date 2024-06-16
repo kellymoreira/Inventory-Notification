@@ -11,7 +11,7 @@
 <p align="center">
 <b> 
 <i>
-   Implementando uma arquitetura serverless na AWS para rastrear e notificar níveis baixos de inventário usando <br> S3, Lambda, DynamoDB e SNS.
+   Implementando uma arquitetura serverless na AWS para rastrear e notificar níveis baixos de inventário usando S3, Lambda, DynamoDB e SNS.
 </i>
 </b>
 </p>
