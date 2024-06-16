@@ -29,7 +29,7 @@
 </p>
 -->
 
-<!--------------------------------------------------------- FIRST OPTION ------------------------------------------
+<!------------------------------------------------------------
 ## **Scenario**
 We are creating an inventory tracking system. Stores from around the world will upload an inventory file to Amazon S3. Our team wants to be able to view the inventory levels and send a notification when inventory levels are low.
 
@@ -56,12 +56,13 @@ At the **end** of all this, our architecture will look like the following exam
 ![Architecture Overview](/images/architecture-overview.png)
 
 ---------------------->
+
 ## **Scenario**
 We're creating an inventory tracking system. 
 Stores worldwide will upload inventory files to Amazon S3. 
 We want to be able to view the inventory levels and send notifications when inventory levels are low.
 
-Process:
+###  Process:
 - **Upload** an **inventory file** to an **_Amazon S3 bucket_**.
 - This upload **triggers** a **_Lambda function_** to read the file and insert items into an **_Amazon DynamoDB_** table.
 - A serverless, web-based dashboard application will use **_Amazon Cognito_** for AWS authentication. It will then gain access to the **_DynamoDB_** table to display inventory levels.
@@ -69,29 +70,21 @@ Process:
 - **_Amazon SNS_** will then **send** a **notification** through short message service (SMS) or email to request additional inventory.
 
 
-
 ## **Implementation Overview**
-Traditionally, applications run on physical or virtual servers that require purchase, provisioning, and capacity management. With AWS Lambda, you run code without pre-allocated servers, triggered as needed, and pay only for usage.
+Traditionally, applications run on physical or virtual servers that require purchase, provisioning, and capacity management. 
+With **_AWS Lambda_**, you run code without pre-allocated servers, triggered as needed, and pay only for usage.
 
-This setup triggers a Lambda function when a file is uploaded to Amazon S3, loading data into an Amazon DynamoDB table. Data is displayed on a dashboard retrieving directly from DynamoDB. This serverless solution scales automatically and incurs minimal costs when idle.
+This setup triggers a **_Lambda function_** when a file is uploaded to **_Amazon S3_**, loading data into an **_Amazon DynamoDB_** table. 
+Data is displayed on a dashboard retrieving directly from **_DynamoDB_**. 
+This serverless solution scales automatically and incurs minimal costs when idle.
 
 ### Objectives:
 - Implement a serverless architecture on AWS
-- Trigger Lambda functions from Amazon S3 and DynamoDB
-- Configure Amazon SNS for notifications
+- Trigger **_Lambda functions_** from **_Amazon S3_** and **_DynamoDB_**
+- Configure **_Amazon SNS_** for notifications
 
-**Final Architecture:**
+## Final Architecture
 ![Architecture Overview](/images/architecture-overview.png)
-
-
-
-
-
-
-
-
-
-
 
 
 <!----------------------------------- TASK 1 -----------------------------------
