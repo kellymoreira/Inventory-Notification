@@ -1,4 +1,4 @@
-ᴇɴɢʟɪꜱʜ | [ᴘᴏʀᴛᴜɢᴜᴇꜱᴇ-ʙʀ](https://github.com/kellymoreira/Github-Pages/blob/master/README_pt_br.md)
+ᴇɴɢʟɪꜱʜ | [ᴘᴏʀᴛᴜɢᴜᴇꜱᴇ-ʙʀ](https://github.com/kellymoreira/Inventory-Notification/blob/main/README_pt-br.md)
 
 <p align="center">
    <img src="./images/notification-icon.png"  alt="Notification Icon" width="23%"/>
